@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!--[if lte IE 9]><style>.invert .card-shirt{display:none;}</style><![endif]-->
+</head>
+<body>
+    <div class="body-wrapper" id="start-page" data-tid="App">
+        <div class="start-end-wrapper">
+            <div class="start-image"></div>
+            <div class="start-name noselect">Memory game</div>
+            <div class="start-end-button-wrapper">
+                <!--[if lt IE 9]><div class="start-no-support-info">Для игры необходим как минимум IE9</div><![endif]-->
+                <![if !IE|(gte IE 9)]><button class="button" onclick="game.Start(); return false;" data-tid="NewGame-startGame">Начать игру</button><![endif]>
+            </div>
+        </div>
+    </div>
+    <![if !IE|(gte IE 9)]>
+    <div class="body-wrapper" id="game-page" style="display:none;" data-tid="Deck">
+        <div class="game-wrapper">
+            <div class="game-head">
+                <div class="game-head-left">
+                    <button id="replay-button" class="game-restart-link game-restart-link-disabled" onclick="game.Replay(); return false;" data-tid="Menu-newGame">Начать заново</button>
+                </div>
+                <div class="game-head-right">
+                    <span class="game-score-string">Очки:<span id="game-score" data-tid="Menu-scores">0</span><span class="game-score-delta" id="game-score-delta">+42</span></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="game-table">
+                <ul class="card-list" id="card-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="body-wrapper" id="end-page" style="display:none;">
+        <div class="start-end-wrapper">
+            <div class="end-image"></div>
+            <div class="end-text">Поздравляем!<br>Ваш итоговый счет:&nbsp; <span id="end-score">0</span></div>
+            <div class="start-end-button-wrapper">
+                <button class="button end-button" onclick="game.Start(); return false;" data-tid="EndGame-retryGame">Еще раз</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+    <![endif]>
+</body>
+</html>

@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+    background: #1b692d;
+    height: 100%;
+    width: 100%;
+}
+
+.button {
+    background: #fff;
+    display: inline-block;
+    opacity: 0.85;
+    border-radius: 4px;
+    color: #1c7430;
+    border: 0;
+    padding: 10px 20px;
+    margin: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0;
+    outline: none;
+    transition: 0.3s opacity ease-out;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+.button:active {
+    padding-top: 11px;
+    padding-bottom: 9px;
+}
+
+.end-button {
+    padding: 10px 30px;
+}
+
+.clearfix {
+    clear: both;
+    display: block;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.body-wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+    min-width: 760px;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+.start-end-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.start-end-button-wrapper {
+    text-align: center;
+}
+
+.start-image {
+    width: 503px;
+    height: 262px;
+    display: block;
+    background: url('../images/StartGame.png') no-repeat;
+    background-size: 503px 262px;
+    background-position: 0 0;
+    margin: 0 auto;
+}
+
+.start-name {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 28px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0 34px;
+}
+
+.start-no-support-info {
+    display: inline;
+    opacity: 0.85;
+    border-radius: 4px;
+    border: 0;
+    padding: 10px 20px;
+    margin: 0;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 16px;
+}
+
+.end-image {
+    width: 516px;
+    height: 275px;
+    display: block;
+    background: url('../images/Group%202.png') no-repeat;
+    background-size: 516px 275px;
+    background-position: 0 0;
+    margin: 0 auto;
+}
+
+.end-text {
+    color: #fff;
+    opacity: 0.85;
+    font-size: 24px;
+    letter-spacing: 0.15px;
+    font-weight: bold;
+    text-align: center;
+    margin: 9px 0 40px;
+    line-height: 35px;
+}
+
+.end-text > * {
+    font-size: 1em;
+}
+
+.game-head {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 10px 15px;
+    box-sizing: border-box;
+    width: 720px;
+    margin: 0 auto;
+}
+
+.game-restart-link {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: -0.25px;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s opacity ease-out;
+    opacity: 0.8;
+}
+
+.game-restart-link-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.game-restart-link:hover {
+    opacity: 1;
+}
+
+.game-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.game-head-left {
+    float: left;
+}
+
+.game-head-right {
+    float: right;
+}
+
+.game-score-string {
+    opacity: 0.8;
+    font-weight: bold;
+    letter-spacing: 0;
+    position: relative;
+}
+
+#game-score {
+    font-family: monospace;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.game-table {
+    display: block;
+}
+
+.card-list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    width: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card-container {
+    display: inline-block;
+    perspective: 1000;
+    margin: 10px;
+    font-size: 0;
+    width: 100px;
+    height: 140px;
+}
+
+.card-item {
+    width: 100px;
+    height: 140px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-item.invert {
+    cursor: default;
+}
+
+.invert .card-shirt {
+    transform: rotateY(180deg);
+}
+.invert .card-inside {
+    transform: rotateY(0);
+}
+
+.card-shirt,
+.card-inside {
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+    transition: 0.3s transform ease-out;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+}
+ 
+.card-shirt {
+    z-index: 2;
+    background-image: url('../images/cards/shirt.png');
+}
+
+.card-inside {
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    ms-transform: rotateY(180deg);
+}
+
+.game-score-delta {
+    position: absolute;
+    font-weight: 600;
+    opacity: 0;
+    right: 0;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dp),
+    only screen and (min-resolution: 2dppx) {
+        .start-image {
+            background-image: url('../images/StartGame@2x.png');
+        }
+        .end-image {
+            background-image: url('../images/Group%202@2x.png');
+        }
+}
